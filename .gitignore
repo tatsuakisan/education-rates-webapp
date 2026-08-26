@@ -1,0 +1,16 @@
+target/
+*.class
+*.log
+
+# IDE configuration
+.vscode/
+.idea/
+*.iml
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Environment files and local secrets
+.env
+application-local.properties

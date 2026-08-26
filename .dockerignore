@@ -1,0 +1,13 @@
+target/
+.git
+.gitignore
+.vscode
+.github
+.DS_Store
+*.log
+node_modules/
+npm-debug.log*
+README.md
+LICENSE
+.env
+.env.local

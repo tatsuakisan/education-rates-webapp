@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title th:text="${title}">Education Rates Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header-row">
+        <h1>Education Rates Dashboard</h1>
+        <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+    </div>
+
+    <div class="controls">
+        <label for="startYear">Start Year</label>
+        <select id="startYear"></select>
+
+        <label for="endYear">End Year</label>
+        <select id="endYear"></select>
+
+        <button id="applyFilter">Apply</button>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-label">Average Population (17yr)</span>
+            <strong id="avgAttendance">--</strong>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Average Graduates</span>
+            <strong id="avgGraduation">--</strong>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Average Graduation %</span>
+            <strong id="avgGradPct">--</strong>
+        </div>
+    </div>
+
+    <div class="chart-card">
+        <h2>Population vs Number of Graduates</h2>
+        <canvas id="ratesChart" height="110"></canvas>
+    </div>
+
+    <div class="chart-card">
+        <h2>Graduation Percentage Over Time</h2>
+        <canvas id="gradPctChart" height="110"></canvas>
+    </div>
+
+    <div class="chart-card">
+        <h2>Public vs Private School Graduates</h2>
+        <canvas id="studentsChart" height="110"></canvas>
+    </div>
+
+    <div class="table-card">
+        <table id="ratesTable">
+            <thead>
+            <tr>
+                <th>Year</th>
+                <th>Population (17yr)</th>
+                <th>Number of Graduates</th>
+                <th>Graduation %</th>
+                <th>Public School Graduates</th>
+                <th>Private School Graduates</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="/js/charts.js"></script>
+</body>
+</html>
